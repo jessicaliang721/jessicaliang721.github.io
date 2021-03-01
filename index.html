@@ -8,11 +8,11 @@
     <title>Jessica Liang | Software Engineer</title>
 </head>
 <body>
-<div class="container">
+<div class="container" id="jessica-app">
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/jl_logo2.png" alt="" width="50"></a>
+            <a class="navbar-brand" href="#"><img src="images/J_white_bg.png" alt="" width="50"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -20,20 +20,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#work">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#faq">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                    <li v-for="navItem in navItems" :key="navItem.text">
+                        <a class="nav-link" v-bind:href="navItem.href">{{navItem.text}}</a>
                     </li>
                 </ul>
             </div>
@@ -70,246 +58,23 @@
     <!-- WORK -->
     <div class="row" id="work">
         <h2>Featured Work</h2>
-        <div class="col-md">
-            <div class="card">
-                <img src="images/marcus.png" class="card-img-top" alt="marcus">
-                <div class="card-body">
-                    <h5 class="card-title">Agent UI</h5>
-                    <h6>2019-now</h6>
-                    <p class="card-text">Build out the front end of a feature-filled customer servicing platform for
-                        agents to assist with customer needs.</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#auiModal">
-                        More details
-                    </button>
-                    <div class="modal fade" id="auiModal" tabindex="-1" aria-labelledby="auiModal"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="auiModalTitle">Agent UI</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="images/marcus.png" class="img-fluid" alt="marcus">
-                                    <p>Marcus is Goldman Sach's consumer-facing business. It offers customers products
-                                        such as savings,
-                                        loans, and checking. It has also partnered with Apple to issue the <a
-                                                href="https://www.apple.com/apple-card" target="_blank">Apple Card</a>.
-                                        Agent UI (AUI) is the customer servicing application built in-house
-                                        that agents use to assist Card customers. This feature-rich application
-                                        contains functionality such as:</p>
-                                    <ul>
-                                        <li>Payments</li>
-                                        <li>Transactions</li>
-                                        <li>Create interactions and cases</li>
-                                        <li>Rewards center</li>
-                                        <li>Document library</li>
-                                        <li>And more</li>
-                                    </ul>
-                                    <p>AUI is used by agents nationwide to service the 1 million+ customers
-                                        who own an Apple card.</p>
-                                    <p><b>Role: </b>App Developer</p>
-                                    <p><b>Responsibilities: </b> Build new features for the app as product and business
-                                        expand
-                                        to ensure an optimal agent and customer experience.
-                                    </p>
-                                    <p><b>Technologies: </b>React, Redux</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md">
-            <div class="card">
-                <img src="images/Capital-one-logo.png" class="card-img-top" alt="capital one logo">
-                <div class="card-body">
-                    <h5 class="card-title">Profinity Data Visualization App</h5>
-                    <h6>2018-19</h6>
-                    <p class="card-text">Format and prepare raw data to be ingested by a data-visualization app that
-                        models various risk profiles in the auto business.</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#c1Modal">
-                        More details
-                    </button>
-                    <div class="modal fade" id="c1Modal" tabindex="-1" aria-labelledby="c1Modal"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="c1ModalTitle">Profinity Data Visualization App</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="images/Capital-one-logo.png" class="card-img-top" alt="capital one logo">
-                                    <p>Profinity is an in-house machine learning platform built for Capital One's
-                                        financial service businesses that will automatically update models with fresh
-                                        data.</p>
-                                    <p><b>Role: </b>Data Engineer</p>
-                                    <p><b>Responsibilities: </b> Prepare and re-format raw data so that it can be
-                                        ingested by the UI. Did this by building a new pipeline using Python for loading
-                                        data into AWS Redshift tables. Simplified the original process by requiring one
-                                        customizable configuration file that contains all necessary table information.
-                                        The configuration file served as a framework for loading a variety of data into
-                                        the same table. Reduced overall load time by 78%.</p>
-                                    <p><b>Technologies: </b>Python, Airflow, SQL</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md">
-            <div class="card">
-                <img src="images/loft_city_church.png" class="card-img-top" alt="loft_city_church">
-                <div class="card-body">
-                    <h5 class="card-title">Loft City Church Website</h5>
-                    <h6>2016</h6>
-                    <p class="card-text">Built Loft City Church's website from the ground up.</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loftModal">
-                        More details
-                    </button>
-                    <div class="modal fade" id="loftModal" tabindex="-1" aria-labelledby="loftModal"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="loftModalTitle">Loft City Church Website</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="images/loft_city_church.png" class="card-img-top"
-                                         alt="Loft City Church website">
-                                    <p>LOFT City Church's Wordpress site was several versions out-of-date, and after a
-                                        crucial
-                                        update, a new website theme was also vital.</p>
-                                    <p><b>Role: </b>Web Master</p>
-                                    <p><b>Responsibilities: </b>Completely redesigned and rebuilt church’s website after
-                                        upgrading to the latest WordPress version. Enabled users to easily manage,
-                                        update, and add site content without needing developer help. Added new
-                                        functionality such as sermon and event managers, which increased user engagement
-                                        and site visits.</p>
-                                    <p><b>Technologies: </b>PHP, HTML, CSS</p>
-                                    <a href="http://loftcitychurch.com" class="btn btn-secondary">Visit website</a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <card-with-modal
+                v-for="(work, index) in featuredWorks"
+                :key="work.id"
+                :work="work"
+                :index="index"
+        ></card-with-modal>
     </div>
 
     <!-- OTHER WORK -->
     <div class="row">
         <h2>Other Things I've Built</h2>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="images/FireShot-Capture-2-Home-Gravocore-https___www.gravocore.com_-1024x519.png"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Gravocore</h5>
-                    <h6>2017</h6>
-                    <p class="card-text">Built website with Wordpress, JavaScript/JQuery, CSS.</p>
-                    <a href="https://gravocore.com" class="btn btn-secondary" target="_blank">Visit website</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="images/FireShot-Capture-52-National-Math-and-Science-Initiative-Home-http___nmsi.imag-dev.com_-1024x581.png"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">National Math and Science Initiative</h5>
-                    <h6>2017</h6>
-                    <p class="card-text">Built website with
-                        Kentico, Javascript/JQuery, CSS.</p>
-                    <a href="https://www.nms.org" class="btn btn-secondary" target="_blank">Visit website</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="images/FireShot-Capture-46-Your-Texas-Electricity-Company-I-TXU-Energy-https___www.txu_.com_.png"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">TXU Energy</h5>
-                    <h6>2017</h6>
-                    <p class="card-text">Created wireframes for TXU's website makeover and built marketing email
-                        templates.</p>
-                    <a href="https://www.txu.com/" class="btn btn-secondary" target="_blank">Visit website</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="images/FireShot-Capture-50-Entrust-Retail-Buy-https___buy.entrust.net_index.html_payment.png"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Entrust Datacard</h5>
-                    <h6>2017</h6>
-                    <p class="card-text">Built out the payment flow to purchase SSL certificates with JavaScript/JQuery
-                        and CSS.</p>
-                    <a href="https://buy.entrust.net/index.html" class="btn btn-secondary" target="_blank">Visit
-                        website</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="images/FireShot-Capture-32-Home-I-City-of-Denton-https___www.cityofdenton.com_-1024x581.png"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">City of Denton</h5>
-                    <h6>2016</h6>
-                    <p class="card-text">Built website with
-                        Kentico, Javascript/JQuery, CSS.</p>
-                    <a href="https://www.cityofdenton.com" class="btn btn-secondary" target="_blank">Visit website</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="images/FireShot-Capture-16-Home-I-Cain-Watters-http___www.cainwatters.com_-1024x554.png"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Cain Watters & Associates</h5>
-                    <h6>2016</h6>
-                    <p class="card-text">Built website with Wordpress, JavaScript/JQuery, CSS.</p>
-                    <a href="https://www.cainwatters.com/" class="btn btn-secondary" target="_blank">Visit website</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="images/FireShot-Capture-38-Home-I-Triumph-Bancorp-https___www.triumphbancorp.com_-1024x554.png"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Triumph Bancorp</h5>
-                    <h6>2015</h6>
-                    <p class="card-text">Built website with Wordpress, JavaScript/JQuery, CSS.</p>
-                    <a href="https://www.triumphbancorp.com" class="btn btn-secondary">Visit website</a>
-                </div>
-            </div>
-        </div>
+        <card-with-link
+                v-for="(work, index) in otherWorks"
+                :key="work.id"
+                :work="work"
+                :index="index"
+        ></card-with-link>
     </div>
 
     <!-- PAST POSITIONS -->
@@ -318,24 +83,36 @@
         <div class="row">
             <div class="col-4">
                 <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
-                       href="#gs" role="tab" aria-controls="home">Goldman Sachs</a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                       href="#c1" role="tab" aria-controls="profile">Capital One</a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
-                       href="#imaginuity" role="tab" aria-controls="messages">Imaginuity</a>
+                    <tab-header
+                        v-for="(tab, index) in tabItems"
+                        :key="tab.id"
+                        :tab="tab"
+                        :index="index"
+                    ></tab-header>
+<!--                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"-->
+<!--                       href="#gs" role="tab" aria-controls="home">Goldman Sachs</a>-->
+<!--                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"-->
+<!--                       href="#c1" role="tab" aria-controls="profile">Capital One</a>-->
+<!--                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"-->
+<!--                       href="#imaginuity" role="tab" aria-controls="messages">Imaginuity</a>-->
                 </div>
             </div>
             <div class="col-8">
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="gs" role="tabpanel" aria-labelledby="list-home-list">
-                        About gs
-                    </div>
-                    <div class="tab-pane fade" id="c1" role="tabpanel" aria-labelledby="list-profile-list">About C1
-                    </div>
-                    <div class="tab-pane fade" id="imaginuity" role="tabpanel" aria-labelledby="list-messages-list">
-                        About Imaginuity
-                    </div>
+                    <tab-body
+                        v-for="(tab, index) in tabItems"
+                        :key="tab.id"
+                        :tab="tab"
+                        :index="index"
+                    ></tab-body>
+<!--                    <div class="tab-pane fade show active" id="gs" role="tabpanel" aria-labelledby="list-home-list">-->
+<!--                        About gs-->
+<!--                    </div>-->
+<!--                    <div class="tab-pane fade" id="c1" role="tabpanel" aria-labelledby="list-profile-list">About C1-->
+<!--                    </div>-->
+<!--                    <div class="tab-pane fade" id="imaginuity" role="tabpanel" aria-labelledby="list-messages-list">-->
+<!--                        About Imaginuity-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -366,92 +143,13 @@
     <div class="row" id="faq">
         <div class="col-sm">
             <h2>Frequently Asked Questions</h2>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                            How did you become a software engineer?
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            If you've peeked at my <a href="https://www.linkedin.com/in/jessicaliang721"
-                                                      target="_blank">
-                            resume</a>, you might've noticed that I graduated from Washington
-                            University in St.
-                            Louis with a Mechanical Engineering degree. How did I end up as a software engineer? During
-                            my senior
-                            year of college I took a web development course and loved it. It brought me back to the
-                            middle school
-                            days of Freewebs (and other self-hosted sites) where I spent hours dabbling with HTML and
-                            CSS!
-                            Having learned modern, up-to-date web practices, I became very interested in web dev as a
-                            possible
-                            career. After graduation, I taught myself how to code in JavaScript that summer and was
-                            fortunate
-                            enough to find a web
-                            development job in my hometown, Dallas.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                            Any advice for aspiring software engineers?
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            At the end of the day, software engineering is problem solving. Companies want to
-                            see that you can not only talk the talk, but also walk the walk. Prove that you can code!
-                            Show off your coding skills with a portfolio of cool projects (they can be official or
-                            unofficial). Also make sure you are well-versed in solving coding problems before heading
-                            into any interview. Practice those skills
-                            on free sites such as <a href="https://leetcode.com/" target="_blank">Leetcode</a> and <a
-                                href="https://leetcode.com/" target="_blank">HackerRank</a>.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                            Can you give me a job referral?
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            Yes! Here's how it works: I will need your resume, email, and job ID that you want to apply
-                            for. <i>I will submit the job application as a referral for you,</i> <b>so don't apply for
-                            it first!</b> You'll receive an email once the app has been submitted with further
-                            instructions.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                aria-controls="flush-collapseFour">
-                            Are you open to finding a new job?
-                        </button>
-                    </h2>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse"
-                         aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            Although I am currently not looking for new opportunities, if you are an innovative company
-                            with open UI/front end roles, let's chat.
-                        </div>
-                    </div>
-                </div>
+            <div class="accordion accordion-flush" id="faqAccordion">
+                <accordion-item
+                        v-for="(item, index) in accordionItems"
+                        :key="item.id"
+                        :item="item"
+                        :index="index"
+                ></accordion-item>
             </div>
         </div>
     </div>
@@ -474,8 +172,12 @@
     </div>
 </div>
 
+<!-- development version, includes helpful console warnings -->
+<script src="https://unpkg.com/vue@next"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+<script src="index.js" type="module"></script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>
