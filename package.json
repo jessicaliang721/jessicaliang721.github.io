@@ -1,0 +1,29 @@
+{
+  "name": "JessicaLiangWebsite",
+  "version": "1.0.0",
+  "description": "Jessica Liang portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch main.scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicaliang721/jessicaliang721.github.io.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Jessica Liang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicaliang721/jessicaliang721.github.io/issues"
+  },
+  "homepage": "https://jessicaliang721.github.io",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

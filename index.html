@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Orelega+One&display=swap" rel="stylesheet">
     <title>Jessica Liang | Software Engineer</title>
 </head>
 <body>
@@ -12,7 +14,7 @@
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/J_white_bg.png" alt="" width="50"></a>
+            <a class="navbar-brand" href="#"><img src="assets/images/green_logo.png" alt="Jessica Liang logo" width="50"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +34,7 @@
     <div class="row">
         <div class="col-sm">
             <h1>Hi! My name is</h1>
-            <h2>Jessica Liang.</h2>
+            <h2 class="display-1">Jessica Liang.</h2>
             <h2>I like to build pretty things for the web.</h2>
             <p>I'm a software engineer based in Dallas, TX. I specialize in turning creative designs into functional
                 websites or applications. I'm currently a front end app developer at <a href="https://www.marcus.com"
@@ -45,13 +47,14 @@
                 <li>HTML & CSS/SCSS</li>
                 <li>React</li>
                 <li>Redux</li>
+                <li>Vue.js</li>
                 <li>Python</li>
             </ul>
-            <a href="https://www.linkedin.com/in/jessicaliang721" class="btn btn-primary" target="_blank">View
+            <a href="https://www.linkedin.com/in/jessicaliang721" class="btn btn-primary" target="_blank">My
                 Linkedin</a>
         </div>
         <div class="col-sm">
-            <img src="images/profile_photo.png" class="img-fluid">
+            <img src="assets/images/profile_photo.png" class="img-fluid">
         </div>
     </div>
 
@@ -59,10 +62,10 @@
     <div class="row" id="work">
         <h2>Featured Work</h2>
         <card-with-modal
-                v-for="(work, index) in featuredWorks"
-                :key="work.id"
-                :work="work"
-                :index="index"
+            v-for="(work, index) in featuredWorks"
+            :key="work.id"
+            :work="work"
+            :index="index"
         ></card-with-modal>
     </div>
 
@@ -70,10 +73,10 @@
     <div class="row">
         <h2>Other Things I've Built</h2>
         <card-with-link
-                v-for="(work, index) in otherWorks"
-                :key="work.id"
-                :work="work"
-                :index="index"
+            v-for="(work, index) in otherWorks"
+            :key="work.id"
+            :work="work"
+            :index="index"
         ></card-with-link>
     </div>
 
@@ -89,12 +92,6 @@
                         :tab="tab"
                         :index="index"
                     ></tab-header>
-<!--                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"-->
-<!--                       href="#gs" role="tab" aria-controls="home">Goldman Sachs</a>-->
-<!--                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"-->
-<!--                       href="#c1" role="tab" aria-controls="profile">Capital One</a>-->
-<!--                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"-->
-<!--                       href="#imaginuity" role="tab" aria-controls="messages">Imaginuity</a>-->
                 </div>
             </div>
             <div class="col-8">
@@ -105,14 +102,6 @@
                         :tab="tab"
                         :index="index"
                     ></tab-body>
-<!--                    <div class="tab-pane fade show active" id="gs" role="tabpanel" aria-labelledby="list-home-list">-->
-<!--                        About gs-->
-<!--                    </div>-->
-<!--                    <div class="tab-pane fade" id="c1" role="tabpanel" aria-labelledby="list-profile-list">About C1-->
-<!--                    </div>-->
-<!--                    <div class="tab-pane fade" id="imaginuity" role="tabpanel" aria-labelledby="list-messages-list">-->
-<!--                        About Imaginuity-->
-<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -121,7 +110,7 @@
     <!-- ABOUT ME -->
     <div class="row" id="about">
         <div class="col-sm">
-            <img src="images/about_pic_2.png" class="img-fluid">
+            <img src="assets/images/about_pic_2.png" class="img-fluid">
         </div>
         <div class="col-sm">
             <h2>About Me</h2>
@@ -130,12 +119,9 @@
                 husband, photography,
                 crafting, house plant care, interior design, and playing board games. My interests vary from day to day,
                 and
-                I'm always down to try new hobbies! If you have a cool suggestion or want to talk about a shared hobby,
-                please feel free to <a href="#contact">send an email my way!</a>
-                :)
+                I'm always down to try new hobbies! If you have a cool suggestion or want to talk about a shared hobby, feel free to reach out! :)
             </p>
-            <p>If you have any other questions for me, please check out the FAQ below before shooting me an
-                email.</p>
+            <p>If you have any other questions for me, please first check out the FAQ below.</p>
         </div>
     </div>
 
@@ -145,10 +131,10 @@
             <h2>Frequently Asked Questions</h2>
             <div class="accordion accordion-flush" id="faqAccordion">
                 <accordion-item
-                        v-for="(item, index) in accordionItems"
-                        :key="item.id"
-                        :item="item"
-                        :index="index"
+                    v-for="(item, index) in accordionItems"
+                    :key="item.id"
+                    :item="item"
+                    :index="index"
                 ></accordion-item>
             </div>
         </div>
@@ -158,8 +144,7 @@
     <div class="row" id="contact">
         <div class="col-sm">
             <h2>Don't be a stranger</h2>
-            <a href="mailto:jessicaliang721@gmail.com?subject=Mail from Jessica's Website" class="btn btn-primary">Send
-                me an email</a>
+            <a href="https://www.linkedin.com/in/jessicaliang721" class="btn btn-primary" target="_blank">Send me a LinkedIn message</a>
             <!-- Insert social media icons -->
         </div>
     </div>
@@ -172,12 +157,10 @@
     </div>
 </div>
 
-<!-- development version, includes helpful console warnings -->
 <script src="https://unpkg.com/vue@next"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-<script src="index.js" type="module"></script>
-<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<script src="assets/js/index.js" type="module"></script>
 </body>
 </html>

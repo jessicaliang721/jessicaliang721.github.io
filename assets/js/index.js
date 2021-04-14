@@ -1,8 +1,8 @@
-import {AccordionItem} from "./components/accordion-item.js";
-import {CardWithLink} from "./components/card-with-link.js";
-import {CardWithModal} from "./components/card-with-modal.js";
-import {TabHeader} from "./components/tab-header.js";
-import {TabBody} from "./components/tab-body.js";
+import {AccordionItem} from "../../components/accordion-item.js";
+import {CardWithLink} from "../../components/card-with-link.js";
+import {CardWithModal} from "../../components/card-with-modal.js";
+import {TabHeader} from "../../components/tab-header.js";
+import {TabBody} from "../../components/tab-body.js";
 
 const JessicaApp = {
     components: {
@@ -31,7 +31,7 @@ const JessicaApp = {
                             CSS!
                             Having learned modern, up-to-date web practices, I became very interested in web dev as a
                             possible
-                            career. After graduation, I taught myself how to code in JavaScript that summer and was
+                            career. After graduation, I taught myself how to code in JavaScript and was
                             fortunate
                             enough to find a web
                             development job in my hometown, Dallas.
@@ -94,7 +94,7 @@ const JessicaApp = {
             featuredWorks: [
                 {
                     id: 'aui',
-                    image: 'images/marcus.png',
+                    image: 'assets/images/marcus.png',
                     title: 'Agent UI',
                     dates: '2019-now',
                     summary: 'Build out the front end of a feature-filled customer servicing platform for agents to assist with customer needs.',
@@ -126,7 +126,7 @@ const JessicaApp = {
                 },
                 {
                     id: 'profinity',
-                    image: 'images/Capital-one-logo.png',
+                    image: 'assets/images/Capital-one-logo.png',
                     title: 'Profinity Data Visualization App',
                     dates: '2018-19',
                     summary: 'Format and prepare raw data to be ingested by a data-visualization app that models various risk profiles in the auto business.',
@@ -146,7 +146,7 @@ const JessicaApp = {
                 },
                 {
                     id: 'loftcc',
-                    image: 'images/loft_city_church.png',
+                    image: 'assets/images/loft_city_church.png',
                     title: 'Loft City Church Website',
                     dates: '2016',
                     summary: 'Built Loft City Church\'s website from the ground up.',
@@ -167,49 +167,49 @@ const JessicaApp = {
             ],
             otherWorks: [
                 {
-                    image: 'images/FireShot-Capture-2-Home-Gravocore-https___www.gravocore.com_-1024x519.png',
+                    image: 'assets/images/FireShot-Capture-2-Home-Gravocore-https___www.gravocore.com_-1024x519.png',
                     title: 'Gravocore',
                     date: '2017',
                     summary: 'Built website with Wordpress, JavaScript/JQuery, CSS.',
                     link: 'https://gravocore.com'
                 },
                 {
-                    image: 'images/FireShot-Capture-52-National-Math-and-Science-Initiative-Home-http___nmsi.imag-dev.com_-1024x581.png',
+                    image: 'assets/images/FireShot-Capture-52-National-Math-and-Science-Initiative-Home-http___nmsi.imag-dev.com_-1024x581.png',
                     title: 'National Math and Science Initiative',
                     date: '2017',
                     summary: 'Built website with Kentico, Javascript/JQuery, CSS.',
                     link: 'https://www.nms.org'
                 },
                 {
-                    image: 'images/FireShot-Capture-46-Your-Texas-Electricity-Company-I-TXU-Energy-https___www.txu_.com_.png',
+                    image: 'assets/images/FireShot-Capture-46-Your-Texas-Electricity-Company-I-TXU-Energy-https___www.txu_.com_.png',
                     title: 'TXU Energy',
                     date: '2017',
                     summary: 'Created wireframes for TXU\'s website makeover and built marketing email templates.',
                     link: 'https://www.txu.com'
                 },
                 {
-                    image: 'images/FireShot-Capture-50-Entrust-Retail-Buy-https___buy.entrust.net_index.html_payment.png',
+                    image: 'assets/images/FireShot-Capture-50-Entrust-Retail-Buy-https___buy.entrust.net_index.html_payment.png',
                     title: 'Entrust Datacard',
                     date: '2017',
                     summary: 'Built out the payment flow to purchase SSL certificates with JavaScript/JQuery and CSS.',
                     link: 'https://buy.entrust.net/index.html'
                 },
                 {
-                    image: 'images/FireShot-Capture-32-Home-I-City-of-Denton-https___www.cityofdenton.com_-1024x581.png',
+                    image: 'assets/images/FireShot-Capture-32-Home-I-City-of-Denton-https___www.cityofdenton.com_-1024x581.png',
                     title: 'City of Denton',
                     date: '2016',
                     summary: 'Built website with Kentico, Javascript/JQuery, CSS.',
                     link: 'https://www.cityofdenton.com'
                 },
                 {
-                    image: 'images/FireShot-Capture-16-Home-I-Cain-Watters-http___www.cainwatters.com_-1024x554.png',
+                    image: 'assets/images/FireShot-Capture-16-Home-I-Cain-Watters-http___www.cainwatters.com_-1024x554.png',
                     title: 'Cain Watters & Associates',
                     date: '2016',
                     summary: 'Built website with Wordpress, JavaScript/JQuery, CSS.',
                     link: 'https://www.cainwatters.com'
                 },
                 {
-                    image: 'images/FireShot-Capture-38-Home-I-Triumph-Bancorp-https___www.triumphbancorp.com_-1024x554.png',
+                    image: 'assets/images/FireShot-Capture-38-Home-I-Triumph-Bancorp-https___www.triumphbancorp.com_-1024x554.png',
                     title: 'Triumph Bancorp',
                     date: '2015',
                     summary: 'Built website with Wordpress, JavaScript/JQuery, CSS.',
