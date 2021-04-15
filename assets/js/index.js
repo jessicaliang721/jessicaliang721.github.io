@@ -54,10 +54,8 @@ const JessicaApp = {
                     id: 'job-referral',
                     title: 'Can you give me a job referral?',
                     body: `
-                        Yes! Here's how it works: I will need your resume, email, and job ID that you want to apply
-                            for. <i>I will submit the job application as a referral for you,</i> <b>so don't apply for
-                            it first!</b> You'll receive an email once the app has been submitted with further
-                            instructions.
+                        Yes! I will need your <b>resume, email, and job ID</b> that you want to apply
+                            for. You'll receive an email with further instructions once I've submitted the app for you. Ask me for a referral by sending me a message on <a href="https://www.linkedin.com/in/jessicaliang721" target="_blank">LinkedIn</a>.
                     `
                 },
                 {
@@ -227,7 +225,7 @@ const JessicaApp = {
                             location: 'Dallas, TX',
                             body: `
                                 <p>
-                                    Marcus by Goldman Sachs is GS's consumer-facing business.
+                                    Marcus is the consumer-facing side of the Goldman Sachs business.
                                 </p>
                                 <p>
                                     Build and maintain a feature-rich application used by customer servicing agents to support the 1m+ customers in one of the company's lines of business. Add new features to the app as the product and business expand to ensure an optimal agent and customer experience.

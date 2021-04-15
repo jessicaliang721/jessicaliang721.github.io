@@ -1,7 +1,7 @@
 export const CardWithLink = {
     props: ['work'],
     template: `
-        <div class="col-sm-3">
+        <div class="col-md-6 col-lg-3">
             <div class="card">
                 <img v-bind:src="work.image"
                      class="card-img-top" v-bind:alt="work.title">

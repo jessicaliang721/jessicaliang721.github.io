@@ -1,5 +1,145 @@
+#jessica-app {
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Orelega One", cursive;
+  color: #25382c;
+}
+
 body {
-  background-color: red;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.25rem;
+}
+
+a {
+  color: #723861;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(114, 56, 97, 0.5);
+}
+
+.btn, .btn-secondary, .btn-primary, #other-work .btn, #other-work .btn-primary, #other-work .btn-secondary {
+  border: none;
+  border-radius: 0;
+}
+
+.btn-primary, #other-work .btn, #other-work .btn-primary, #other-work .btn-secondary {
+  background-color: #DC907D;
+}
+.btn-primary:hover, #other-work .btn:hover, #other-work .btn-primary:hover, #other-work .btn-secondary:hover {
+  border: none;
+  background-color: rgba(220, 144, 125, 0.5);
+}
+
+.card {
+  border: none;
+  background: none;
+}
+
+.row {
+  padding: 2rem 0;
+}
+
+.accordion-button {
+  color: #25382c;
+  font-size: 1.25rem;
+}
+.accordion-button:focus {
+  border: none;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  color: #25382c;
+  background-color: #FFEFE5;
+}
+
+.list-group-item {
+  border-radius: 0 !important;
+}
+.list-group-item.active {
+  background-color: #723861;
+  border: none;
+}
+
+.navbar {
+  background-color: #723861;
+}
+.navbar .navbar-toggler {
+  border: 1px solid white;
+  border-radius: 0;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar .navbar-collapse .navbar-nav .nav-link {
+  color: white;
+}
+
+.hero {
+  background-color: #FFEFE5;
+}
+.hero .hero-image {
+  display: flex;
+  align-items: center;
+}
+
+#work .btn, #work .btn-primary, #work .btn-secondary {
+  background: #723861;
+}
+#work .btn:hover, #work .btn-primary:hover, #work .btn-secondary:hover {
+  background-color: rgba(114, 56, 97, 0.5);
+}
+
+#other-work {
+  background-color: #FFEFE5;
+}
+#about {
+  color: #25382c;
+  background-color: #ABBBA9;
+}
+#about .row {
+  padding: 0;
+}
+#about .right-side {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#experience .col-md-8 {
+  background-color: #DC907D;
+  color: #FFEFE5;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#contact .fa {
+  font-size: 2rem;
+}
+
+.footer {
+  background-color: #723861;
+  color: white;
+}
+.footer .row {
+  padding: 1rem 0;
+}
+.footer .row p {
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  #experience .col-md-4 {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    align-content: flex-end;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

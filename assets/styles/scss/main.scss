@@ -1,3 +1,204 @@
+$body-font: 'Josefin Sans', sans-serif;
+$heading-font: 'Orelega One', cursive;
+$body-font-size: 1.25rem;
+
+// colors
+$serenade: #FFEFE5;
+$burning-sand: #DC907D;
+$cosmic: #723861;
+$cosmic-light: rgba(114, 56, 97, 0.5);
+$heavy-metal: #25382c;
+$green-spring: #ABBBA9;
+
+#jessica-app {
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  color: $heavy-metal;
+}
+
 body {
-  background-color: red;
+  font-family: $body-font;
+  font-size: $body-font-size;
+}
+
+a {
+  color: $cosmic;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    color: $cosmic-light
+  }
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+}
+
+.btn-primary {
+  @extend .btn;
+
+  background-color: $burning-sand;
+
+  &:hover {
+    border: none;
+    background-color: rgba(220, 144, 125, 0.5);
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+}
+
+.card {
+  border: none;
+  background: none;
+}
+
+.row {
+  padding: 2rem 0;
+}
+
+// accordion
+.accordion-button {
+  color: $heavy-metal;
+  font-size: $body-font-size;
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+
+  &:not(.collapsed) {
+    color: $heavy-metal;
+    background-color: $serenade;
+  }
+}
+
+// list group
+.list-group-item {
+  border-radius: 0!important;
+
+  &.active {
+    background-color: $cosmic;
+    border: none;
+  }
+}
+
+// NAVIGATION
+.navbar {
+  background-color: $cosmic;
+
+  .navbar-toggler {
+    border: 1px solid white;
+    border-radius: 0;
+  }
+  .navbar-collapse {
+    text-align: center;
+
+    .navbar-nav {
+      .nav-link {
+        color: white;
+      }
+    }
+  }
+}
+
+// HERO
+.hero {
+  background-color: $serenade;
+
+  .hero-image {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// WORK
+#work {
+  .btn {
+    background: $cosmic;
+
+    &:hover {
+      background-color: $cosmic-light;
+    }
+  }
+}
+
+// OTHER-WORK
+#other-work {
+  background-color: $serenade;
+
+  .btn {
+    @extend .btn-primary
+  }
+}
+
+// ABOUT
+#about {
+  color: $heavy-metal;
+  background-color: $green-spring;
+
+  .row {
+    padding: 0;
+  }
+
+  .right-side {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+// EXPERIENCE
+#experience {
+  .col-md-8 {
+    background-color: $burning-sand;
+    color: $serenade;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+ }
+}
+
+// CONTACT
+#contact {
+  .fa {
+    font-size: 2rem;
+  }
+}
+
+// FOOTER
+.footer {
+  background-color: $cosmic;
+  color: white;
+
+  .row {
+    padding: 1rem 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  #experience {
+    .col-md-4 {
+      padding: 0;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .navbar {
+    .navbar-collapse {
+      align-content: flex-end;
+      width: auto;
+    }
+  }
 }
