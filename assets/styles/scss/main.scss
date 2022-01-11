@@ -87,6 +87,12 @@ a {
     background-color: $cosmic;
     border: none;
   }
+
+  &:hover {
+    background-color: $cosmic;
+    opacity: 50%;
+    color: white;
+  }
 }
 
 // NAVIGATION
@@ -167,6 +173,7 @@ a {
 #contact {
   .fa {
     font-size: 2rem;
+    padding: 0.5rem;
   }
 }
 

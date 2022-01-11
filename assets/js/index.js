@@ -165,6 +165,13 @@ const JessicaApp = {
             ],
             otherWorks: [
                 {
+                    image: 'assets/images/personal_blog_screenshot.PNG',
+                    title: 'Jessica\'s Playground',
+                    date: '2021',
+                    summary: 'Built personal blog using Jekyll.',
+                    link: 'https://blog.jessicaliang.net'
+                },
+                {
                     image: 'assets/images/FireShot-Capture-2-Home-Gravocore-https___www.gravocore.com_-1024x519.png',
                     title: 'Gravocore',
                     date: '2017',
@@ -221,14 +228,24 @@ const JessicaApp = {
                     roles: [
                         {
                             position: 'Software Engineer',
-                            dates: 'May 2019 - now',
+                            dates: '2020-now',
+                            location: 'Dallas, TX',
+                            body: `
+                                <p>
+                                    Build additional functionalities within servicing application used by agents to support cardholders of the GM card. Continue to support functionalities that serve existing partners and improve overall agent productivity experience.
+                                </p>
+                            `
+                        },
+                        {
+                            position: 'Software Engineer',
+                            dates: '2019',
                             location: 'Dallas, TX',
                             body: `
                                 <p>
                                     Marcus is the consumer-facing side of the Goldman Sachs business.
                                 </p>
                                 <p>
-                                    Build and maintain a feature-rich application used by customer servicing agents to support the 1m+ customers in one of the company's lines of business. Add new features to the app as the product and business expand to ensure an optimal agent and customer experience.
+                                    Build and maintain a feature-rich application used by customer servicing agents to support the 1m+ Apple Card customers. Add new features to the app as the product and business expand to ensure an optimal agent and customer experience.
                                 </p>
                             `
                         }
